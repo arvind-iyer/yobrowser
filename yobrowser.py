@@ -19,7 +19,7 @@ builder.add_from_file("ui.glade")
 builder.connect_signals(Handler())
 
 window = builder.get_object("window1")
-
+window.resize(1000,1000)
 browserholder = WebKit.WebView()
 browserholder.set_editable(False)
 #browserholder.load_html_string("<b>Yeezus</b>", "file://")

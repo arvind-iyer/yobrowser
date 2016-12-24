@@ -2,13 +2,13 @@ from cx_Freeze import setup, Executable
 
 # Dependencies are automatically detected, but it might need
 # fine tuning.
-buildOptions = dict(packages = [], excludes = [])
+buildOptions = dict(packages = ["gi"], excludes = [])
 
 import sys
 base = 'Win32GUI' if sys.platform=='win32' else None
 
 executables = [
-    Executable('yobrowser.py', base=base, targetName = 'yo')
+    Executable(script='yobrowser.py', base=base, targetName='yo')
 ]
 
 setup(name='Yo Browser',
